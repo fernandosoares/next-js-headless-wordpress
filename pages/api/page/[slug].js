@@ -6,6 +6,7 @@ export default async (req, res) => {
     query GET_PAGE_BY_SLUG($id: ID!) {
         page(id: $id, idType: URI) {
           id
+          title
           content
         }
       } 
