@@ -25,5 +25,7 @@ export default async (req, res) => {
 
   const jsonResponse = await data.json()
 
+  console.log(jsonResponse)
+
   res.json(jsonResponse.data)
 }

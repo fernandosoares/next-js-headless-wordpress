@@ -8,7 +8,7 @@ export default function Home() {
 
   if (error) return <div>error</div>
   if (!data) return <div>loading...</div>
-  console.log(data)
+  
   return (
     <div>
       <Head>
@@ -17,13 +17,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Next JS Headless Wordpress</h1>
-      </main>
-
-      <div>
-        <h2>{data.page.title}</h2>
+        <h1>{data.page.title}</h1>
         <p dangerouslySetInnerHTML={{ __html: data.page.content }}></p>
-      </div>
+      </main>
     </div>
   )
 }
